@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./src/Italcol.TurboGraneles.sln
     - name: Build
-      run: dotnet build --project ./src/Italcol.TurboGraneles.sln --no-restore
+      run: dotnet build ./src/Italcol.TurboGraneles.sln --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test ./src/Italcol.TurboGraneles.sln --no-build --verbosity normal

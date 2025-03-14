@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Italcol.Turbograneles.Application\Italcol.Turbograneles.Application.csproj" />
-    <ProjectReference Include="..\Italcol.TurboGraneles.Clients\ItalcolTurbograneles.Clients.csproj" />
+    <ProjectReference Include="..\Italcol.Turbograneles.Application\Italcol.Turbograneles.Application.csproj" />
   </ItemGroup>
 
 </Project>

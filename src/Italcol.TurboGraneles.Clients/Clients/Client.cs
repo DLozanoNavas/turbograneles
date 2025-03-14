@@ -7466,8 +7466,7 @@ namespace Italcol.TurboGraneles.Clients
         /// </summary>
         [Newtonsoft.Json.JsonProperty("data", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<System.Collections.Generic.ICollection<object>> Data { get; set; } = new System.Collections.ObjectModel.Collection<System.Collections.Generic.ICollection<object>>();
-
+        public System.Collections.Generic.List<object> Data { get; set; } = new System.Collections.Generic.List<object>();
         /// <summary>
         /// ISO 8601 timestamp of the response
         /// </summary>

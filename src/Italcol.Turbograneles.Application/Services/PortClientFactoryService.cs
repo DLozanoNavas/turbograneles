@@ -1,25 +1,33 @@
 ﻿using Italcol.TurboGraneles.Clients;
+using Microsoft.Kiota.Http.HttpClientLibrary;
+using Microsoft.Kiota.Abstractions.Authentication;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
+
 
 namespace Italcol.Turbograneles.Application.Services;
 
-public class PortClientFactoryService (IHttpClientFactory httpClientFactory): IPortClientFactoryService
+public class PortClientFactoryService(IAuthenticationProvider authProvider) : IPortClientFactoryService
 {
     private const string ClientUrl = "https://middleware-dev-bcdmasc4gjehe3db.westus-01.azurewebsites.net";
 
-    public async Task<Client> CreateClientAsync()
+    public Task<TurboGranelesClient> CreateClientAsync()
     {
-        var client = new Client(ClientUrl, httpClientFactory.CreateClient());
-
-        // TODO: Authenticate client
-
-
-        var token = await client.AuthAsync(new()
+        // Create Kiota HTTP request adapter with authentication provider
+        var adapter = new HttpClientRequestAdapter(authProvider)
         {
-            Email = "user@example.com",
-            Password = "password123"
-        });
+            BaseUrl = ClientUrl
+        };
 
-
-        return client;
+        // Return the authenticated TurboGranelesClient
+        return Task.FromResult(new TurboGranelesClient(adapter));
     }
+
+
+}
+
+public class AuthResponse
+{
+    public string AccessToken { get; set; } = string.Empty;
 }

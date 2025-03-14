@@ -1,13 +1,17 @@
-﻿using Italcol.Turbograneles.Application.UseCases;
-using Italcol.TurboGraneles.Clients;
+﻿using Italcol.Turbograneles.Application.UseCases.Interfaces;
+using Italcol.TurboGraneles.Clients.Models;
+
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Kiota.Abstractions.Serialization;
 
 namespace ItalcolTurbograneles.Adapters.Controllers;
 
-public class GetVoyageAndVesselController(GetVoyageAndVesselUseCase getVoyageAndVesselUseCase) : Controller
+[ApiController]
+[Route("/api/v1/[controller]")]
+public class GetVoyageAndVesselController(IGetVoyageAndVesselUseCase getVoyageAndVesselUseCase) : Controller
 {
-    [HttpGet]
-    public async Task<IActionResult> Index(GetVoyageandVesselDto request)
+    [HttpPost]
+    public async Task<ActionResult<UntypedNode>> Index([FromBody] GetVoyageandVesselDto request)
     {
         var voyageAndVessel = await getVoyageAndVesselUseCase.ExecuteAsync(request);
 

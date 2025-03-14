@@ -5,11 +5,11 @@ VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItalcolTurbograneles.Adapters", "ItalcolTurbograneles.Adapters\ItalcolTurbograneles.Adapters.csproj", "{8DF364E0-9A98-475B-A87C-7DBD3607434A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItalcolTurbograneles.Clients", "Italcol.TurboGraneles.Clients\ItalcolTurbograneles.Clients.csproj", "{2BF88BC3-F14C-44AE-ACE9-32A0907560FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Clients", "Italcol.TurboGraneles.Clients\Italcol.Turbograneles.Clients.csproj", "{2BF88BC3-F14C-44AE-ACE9-32A0907560FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Domain", "..\Italcol.Turbograneles.Domain\Italcol.Turbograneles.Domain.csproj", "{92E402A7-52ED-4F03-87C7-878014975D34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Domain", "Italcol.Turbograneles.Domain\Italcol.Turbograneles.Domain.csproj", "{D52D7C90-0356-4BF6-BB5A-650368422451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Application", "..\Italcol.Turbograneles.Application\Italcol.Turbograneles.Application.csproj", "{C0A0369F-562B-401B-BAAC-D0BD0D919241}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Application", "Italcol.Turbograneles.Application\Italcol.Turbograneles.Application.csproj", "{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{2BF88BC3-F14C-44AE-ACE9-32A0907560FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF88BC3-F14C-44AE-ACE9-32A0907560FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF88BC3-F14C-44AE-ACE9-32A0907560FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92E402A7-52ED-4F03-87C7-878014975D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92E402A7-52ED-4F03-87C7-878014975D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92E402A7-52ED-4F03-87C7-878014975D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92E402A7-52ED-4F03-87C7-878014975D34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0A0369F-562B-401B-BAAC-D0BD0D919241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0A0369F-562B-401B-BAAC-D0BD0D919241}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0A0369F-562B-401B-BAAC-D0BD0D919241}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0A0369F-562B-401B-BAAC-D0BD0D919241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52D7C90-0356-4BF6-BB5A-650368422451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52D7C90-0356-4BF6-BB5A-650368422451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52D7C90-0356-4BF6-BB5A-650368422451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52D7C90-0356-4BF6-BB5A-650368422451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Italcol.Turbograneles.Application\Italcol.Turbograneles.Application.csproj" />
+    <ProjectReference Include="..\Italcol.TurboGraneles.Clients\Italcol.Turbograneles.Clients.csproj" />
   </ItemGroup>
 
 </Project>

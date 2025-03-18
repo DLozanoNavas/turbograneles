@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Italcol.TurboGraneles.Clients\Italcol.Turbograneles.Clients.csproj" />
+    <ProjectReference Include="..\Italcol.TurboGraneles.ServiceDefaults\Italcol.TurboGraneles.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

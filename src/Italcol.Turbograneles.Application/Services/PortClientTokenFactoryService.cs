@@ -11,7 +11,6 @@ public class PortClientTokenFactoryService(HttpClient httpClient)
     private string? _token;
     private readonly string _email = "user@example.com";
     private readonly string _password = "password123";
-
     private const string AuthEndpoint = "https://middleware-dev-bcdmasc4gjehe3db.westus-01.azurewebsites.net/api/v1/auth";
 
     // TODO: Replace with real credentials or fetch them securely

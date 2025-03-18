@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Application", "Italcol.Turbograneles.Application\Italcol.Turbograneles.Application.csproj", "{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.TurboGraneles.AppHost", "Italcol.TurboGraneles.AppHost\Italcol.TurboGraneles.AppHost.csproj", "{DE955007-276E-4CA0-9B0E-D229C3D83F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.TurboGraneles.ServiceDefaults", "Italcol.TurboGraneles.ServiceDefaults\Italcol.TurboGraneles.ServiceDefaults.csproj", "{BA4AD422-606D-4F97-8367-386699EED59A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{851CE06E-68C4-4F5E-A10C-3DA2F5EABA39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE955007-276E-4CA0-9B0E-D229C3D83F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE955007-276E-4CA0-9B0E-D229C3D83F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE955007-276E-4CA0-9B0E-D229C3D83F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE955007-276E-4CA0-9B0E-D229C3D83F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA4AD422-606D-4F97-8367-386699EED59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA4AD422-606D-4F97-8367-386699EED59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA4AD422-606D-4F97-8367-386699EED59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA4AD422-606D-4F97-8367-386699EED59A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

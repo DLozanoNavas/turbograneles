@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 
 namespace Italcol.Turbograneles.Application.UseCases
 {
-    public class SendVesselStatusUseCase(PortClientFactoryService portClientFactoryService) : ISendVesselStatusUseCase
+    public class SendVesselStatusUseCase(IPortClientFactoryService portClientFactoryService) : ISendVesselStatusUseCase
     {
         public async Task<UntypedNode?> ExecuteAsync(SendVesselStatusDto request)
         {

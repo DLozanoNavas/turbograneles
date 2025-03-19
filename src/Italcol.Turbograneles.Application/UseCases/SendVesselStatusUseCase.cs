@@ -1,0 +1,16 @@
+﻿using Italcol.Turbograneles.Application.Services;
+using Italcol.Turbograneles.Application.UseCases.Interfaces;
+using Italcol.TurboGraneles.Clients.Models;
+using Microsoft.Kiota.Abstractions.Serialization;
+
+namespace Italcol.Turbograneles.Application.UseCases
+{
+    public class SendVesselStatusUseCase(PortClientFactoryService portClientFactoryService) : ISendVesselStatusUseCase
+    {
+        public async Task<UntypedNode?> ExecuteAsync(SendVesselStatusDto request)
+        {
+            var client = await portClientFactoryService.CreateClientAsync();
+            return await client.Api.V1.Miit.SendVesselStatus.PostAsync(request);
+        }
+    }
+}

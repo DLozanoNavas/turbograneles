@@ -17,8 +17,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpClient<PortClientTokenFactoryService>();
 builder.Services.AddScoped<IAuthenticationProvider, BearerTokenAuthProvider>();
 builder.Services.AddScoped<IPortClientFactoryService, PortClientFactoryService>();
-builder.Services.AddScoped<IGetVoyageAndVesselUseCase, GetVoyageAndVesselUseCase>();
 
+//Register use cases
+builder.Services.AddScoped<ISendVesselStatusUseCase, SendVesselStatusUseCase>();
+builder.Services.AddScoped<IGetVoyageAndVesselUseCase, GetVoyageAndVesselUseCase>();
+builder.Services.AddScoped<IGetLoadByEachVesselUseCase, GetLoadByEachVesselUseCase>();
 
 builder.Services.AddScoped<IPortClientFactoryService, PortClientFactoryService>();
 

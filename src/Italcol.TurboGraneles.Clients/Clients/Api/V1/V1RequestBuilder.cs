@@ -7,7 +7,6 @@ using Italcol.TurboGraneles.Clients.Api.V1.ElectronicInvoice;
 using Italcol.TurboGraneles.Clients.Api.V1.Email;
 using Italcol.TurboGraneles.Clients.Api.V1.EmailGroups;
 using Italcol.TurboGraneles.Clients.Api.V1.Jobs;
-using Italcol.TurboGraneles.Clients.Api.V1.Logs;
 using Italcol.TurboGraneles.Clients.Api.V1.Miit;
 using Italcol.TurboGraneles.Clients.Api.V1.Mintransporte;
 using Italcol.TurboGraneles.Clients.Api.V1.ScaleWeight;
@@ -62,11 +61,6 @@ namespace Italcol.TurboGraneles.Clients.Api.V1
         public global::Italcol.TurboGraneles.Clients.Api.V1.Jobs.JobsRequestBuilder Jobs
         {
             get => new global::Italcol.TurboGraneles.Clients.Api.V1.Jobs.JobsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The logs property</summary>
-        public global::Italcol.TurboGraneles.Clients.Api.V1.Logs.LogsRequestBuilder Logs
-        {
-            get => new global::Italcol.TurboGraneles.Clients.Api.V1.Logs.LogsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The miit property</summary>
         public global::Italcol.TurboGraneles.Clients.Api.V1.Miit.MiitRequestBuilder Miit

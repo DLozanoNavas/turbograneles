@@ -3,6 +3,8 @@
 #nullable disable
 
 using Italcol.Turbograneles.Adapters.Areas.Identity.Data;
+using Italcol.Turbograneles.Adapters.Data;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

@@ -3,7 +3,9 @@
 #nullable disable
 
 using System.ComponentModel.DataAnnotations;
-using Italcol.Turbograneles.Adapters.Areas.Identity.Data;
+
+using Italcol.Turbograneles.Adapters.Data;
+
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

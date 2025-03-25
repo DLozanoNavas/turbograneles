@@ -3,8 +3,8 @@ using Italcol.Turbograneles.Application.UseCases;
 using Italcol.Turbograneles.Application.UseCases.Interfaces;
 
 using Microsoft.Kiota.Abstractions.Authentication;
-using Italcol.Turbograneles.Adapters.Areas.Identity.Data;
 using Microsoft.EntityFrameworkCore;
+using Italcol.Turbograneles.Adapters.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

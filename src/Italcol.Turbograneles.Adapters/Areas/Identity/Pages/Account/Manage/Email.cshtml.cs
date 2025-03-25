@@ -5,7 +5,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
-using Italcol.Turbograneles.Adapters.Areas.Identity.Data;
+
+using Italcol.Turbograneles.Adapters.Data;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;

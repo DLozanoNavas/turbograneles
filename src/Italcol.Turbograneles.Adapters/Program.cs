@@ -48,10 +48,7 @@ app.MapDefaultEndpoints();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    using var scope = app.Services.CreateScope();
-    var context = scope.ServiceProvider.GetRequiredService<DataContext>();
-    context.Database.EnsureCreated();
-    context.Database.Migrate();
+
 }
 
 app.UseAuthentication();

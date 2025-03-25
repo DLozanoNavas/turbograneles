@@ -8,16 +8,15 @@ using Microsoft.Kiota.Abstractions.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("postgresdb") ?? throw new InvalidOperationException("Connection string 'postgresdb' not found.");;
-
+//var connectionString = builder.Configuration.GetConnectionString("postgresdb") ?? throw new InvalidOperationException("Connection string 'postgresdb' not found.");;
 //builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
-builder.Services.AddDbContext<DataContext>(options => options.UseNpgsql(connectionString));
+//builder.Services.AddDbContext<DataContext>(options => options.UseNpgsql(connectionString));
+builder.AddNpgsqlDbContext<DataContext>(connectionName: "postgresdb");
 
 
 builder.Services
     .AddIdentityApiEndpoints<ApplicationUser>()
     .AddEntityFrameworkStores<DataContext>();
-
 
 
 builder.AddServiceDefaults();
@@ -49,7 +48,10 @@ app.MapDefaultEndpoints();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<DataContext>();
+    context.Database.EnsureCreated();
+    context.Database.Migrate();
 }
 
 app.UseAuthentication();

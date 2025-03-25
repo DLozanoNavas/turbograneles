@@ -1,7 +1,6 @@
-﻿namespace Italcol.Turbograneles.Domain
-{
-    public class Class1
-    {
+﻿namespace Italcol.Turbograneles.Domain;
 
-    }
+public class Class1
+{
+
 }

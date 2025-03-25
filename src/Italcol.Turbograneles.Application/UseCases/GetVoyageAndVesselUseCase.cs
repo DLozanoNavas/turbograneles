@@ -1,6 +1,5 @@
 ﻿using Italcol.Turbograneles.Application.Services;
 using Italcol.Turbograneles.Application.UseCases.Interfaces;
-using Italcol.TurboGraneles.Clients;
 using Italcol.TurboGraneles.Clients.Models;
 using Microsoft.Kiota.Abstractions.Serialization;
 

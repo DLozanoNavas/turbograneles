@@ -3,8 +3,18 @@ using Italcol.Turbograneles.Application.UseCases;
 using Italcol.Turbograneles.Application.UseCases.Interfaces;
 
 using Microsoft.Kiota.Abstractions.Authentication;
+using Italcol.Turbograneles.Adapters.Areas.Identity.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("DataContextConnection") ?? throw new InvalidOperationException("Connection string 'DataContextConnection' not found.");;
+
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services
+    .AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<DataContext>();
 
 builder.AddServiceDefaults();
 
@@ -13,6 +23,8 @@ builder.AddServiceDefaults();
 builder.Services.AddOpenApi();
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpClient<PortClientTokenFactoryService>();
 builder.Services.AddScoped<IAuthenticationProvider, BearerTokenAuthProvider>();
@@ -32,6 +44,9 @@ if (app.Environment.IsDevelopment())
 {
 
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapOpenApi();
 app.UseSwaggerUI(static options =>

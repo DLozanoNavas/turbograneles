@@ -1,5 +1,8 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.ItalcolTurbograneles_Adapters>("italcolturbograneles-adapters");
+var rabbitmq = builder.AddRabbitMQ("messaging");
+
+builder.AddProject<Projects.Italcol.Turbograneles_Adapters>("Italcol.Turbograneles-adapters")
+    .WithReference(rabbitmq);
 
 builder.Build().Run();

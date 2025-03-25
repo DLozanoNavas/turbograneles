@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ItalcolTurbograneles.Adapters\ItalcolTurbograneles.Adapters.csproj" />
+    <ProjectReference Include="..\Italcol.Turbograneles.Adapters\Italcol.Turbograneles.Adapters.csproj" />
   </ItemGroup>
 
 </Project>

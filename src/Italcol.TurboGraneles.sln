@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItalcolTurbograneles.Adapters", "ItalcolTurbograneles.Adapters\ItalcolTurbograneles.Adapters.csproj", "{8DF364E0-9A98-475B-A87C-7DBD3607434A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Adapters", "ItalcolTurbograneles.Adapters\Italcol.Turbograneles.Adapters.csproj", "{8DF364E0-9A98-475B-A87C-7DBD3607434A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Italcol.Turbograneles.Clients", "Italcol.TurboGraneles.Clients\Italcol.Turbograneles.Clients.csproj", "{2BF88BC3-F14C-44AE-ACE9-32A0907560FF}"
 EndProject

@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using Italcol.Turbograneles.Adapters.Areas.Identity.Data;
+
 using Italcol.Turbograneles.Adapters.Data;
 
 using Microsoft.AspNetCore.Identity;

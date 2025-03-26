@@ -34,9 +34,14 @@ builder.Services.AddScoped<IAuthenticationProvider, BearerTokenAuthProvider>();
 builder.Services.AddScoped<IPortClientFactoryService, PortClientFactoryService>();
 
 //Register use cases
+builder.Services.AddScoped<IGetGateInUseCase, GetGateInUseCase>();
+builder.Services.AddScoped<IGetGateOutUseCase, GetGateOutUseCase>();
 builder.Services.AddScoped<ISendVesselStatusUseCase, SendVesselStatusUseCase>();
 builder.Services.AddScoped<IGetVoyageAndVesselUseCase, GetVoyageAndVesselUseCase>();
 builder.Services.AddScoped<IGetLoadByEachVesselUseCase, GetLoadByEachVesselUseCase>();
+builder.Services.AddScoped<ISendCustomsReleaseCargoUseCase, SendCustomsReleaseCargoUseCase>();
+builder.Services.AddScoped<IGetAppointmentInformationUseCase, GetAppointmentInformationUseCase>();
+builder.Services.AddScoped<ISendTruckFinalizationLoadingUseCase, SendTruckFinalizationLoadingUseCase>();
 
 builder.Services.AddScoped<IPortClientFactoryService, PortClientFactoryService>();
 

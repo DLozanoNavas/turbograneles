@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Italcol.Turbograneles.Application\Italcol.Turbograneles.Application.csproj" />
+    <ProjectReference Include="..\Italcol.Turbograneles.Domain\Italcol.Turbograneles.Domain.csproj" />
     <ProjectReference Include="..\Italcol.TurboGraneles.ServiceDefaults\Italcol.TurboGraneles.ServiceDefaults.csproj" />
   </ItemGroup>
 

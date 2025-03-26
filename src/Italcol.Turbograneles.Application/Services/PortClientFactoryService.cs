@@ -1,9 +1,6 @@
 ﻿using Italcol.TurboGraneles.Clients;
 using Microsoft.Kiota.Http.HttpClientLibrary;
 using Microsoft.Kiota.Abstractions.Authentication;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
 
 
 namespace Italcol.Turbograneles.Application.Services;

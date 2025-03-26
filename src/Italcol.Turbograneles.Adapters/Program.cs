@@ -3,7 +3,6 @@ using Italcol.Turbograneles.Application.Services;
 using Italcol.Turbograneles.Application.UseCases;
 using Italcol.Turbograneles.Application.UseCases.Interfaces;
 
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Kiota.Abstractions.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,8 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 //var connectionString = builder.Configuration.GetConnectionString("postgresdb") ?? throw new InvalidOperationException("Connection string 'postgresdb' not found.");;
 //builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
 //builder.Services.AddDbContext<DataContext>(options => options.UseNpgsql(connectionString));
-builder.AddNpgsqlDbContext<DataContext>(connectionName: "postgresdb");
-
+builder.AddNpgsqlDbContext<DataContext>(connectionName: "turbograneles");
 
 builder.Services
     .AddIdentityApiEndpoints<ApplicationUser>()
@@ -29,7 +27,6 @@ builder.Services.AddOpenApi();
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
 
 
 builder.Services.AddHttpClient<PortClientTokenFactoryService>();

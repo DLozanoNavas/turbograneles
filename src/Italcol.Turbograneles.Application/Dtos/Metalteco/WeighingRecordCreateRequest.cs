@@ -1,7 +1,7 @@
-﻿namespace Italcol.Turbograneles.Domain.Metalteco
+﻿namespace Italcol.Turbograneles.Application.Dtos.Metalteco
 {
 
-    public class WeighingRecord
+    public class WeighingRecordCreateRequest
     {
         public int TransactionId { get; set; }
         public int ScaleId { get; set; }

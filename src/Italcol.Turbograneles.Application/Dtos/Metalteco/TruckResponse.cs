@@ -1,6 +1,6 @@
-﻿namespace Italcol.Turbograneles.Domain.Metalteco
+﻿namespace Italcol.Turbograneles.Application.Dtos.Metalteco
 {
-    public class Truck
+    public class TruckResponse
     {
         public int Id { get; set; }
         public string Type { get; set; }
@@ -12,5 +12,4 @@
         public int? MaterialId { get; set; }
         public bool DirectDispatch { get; set; }
     }
-
 }

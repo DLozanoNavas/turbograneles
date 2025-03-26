@@ -14,10 +14,4 @@ public class DataContext(DbContextOptions<DataContext> options) : IdentityDbCont
         // Add your customizations after calling base.OnModelCreating(builder);
 
     }
-
-    public DbSet<Truck> Trucks { get; set; }
-    public DbSet<Vessel> Vessels { get; set; }
-    public DbSet<Transaction> Transactions { get; set; }
-    public DbSet<PartialShipment> PartialShipments { get; set; }
-    public DbSet<WeighingRecord> WeighingRecords { get; set; }
 }

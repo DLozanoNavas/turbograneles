@@ -1,5 +1,5 @@
-﻿namespace Italcol.Turbograneles.Domain.Metalteco;
-public class Vessel
+﻿namespace Italcol.Turbograneles.Application.Dtos.Metalteco;
+public class VesselResponse
 {
     public int Id { get; set; }
     public string Type { get; set; }

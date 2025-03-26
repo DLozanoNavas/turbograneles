@@ -62,7 +62,7 @@ app.UseAuthorization();
 app.MapOpenApi();
 app.UseSwaggerUI(static options =>
 {
-    options.SwaggerEndpoint("/openapi/v1.json", "My API V1");
+    options.SwaggerEndpoint("/openapi/v1.json", "Turbograneles API V1");
 });
 
 app.MapGroup("/account").MapIdentityApi<ApplicationUser>();

@@ -1,8 +1,8 @@
-﻿using Italcol.TurboGraneles.Clients.Models;
-using Microsoft.Kiota.Abstractions.Serialization;
+﻿using Italcol.Turbograneles.Application.Dtos.Port;
+using Italcol.TurboGraneles.Clients.Models;
 
 namespace Italcol.Turbograneles.Application.UseCases.Interfaces;
 public interface ISendVesselStatusUseCase
 {
-    public Task<UntypedNode?> ExecuteAsync(SendVesselStatusDto request);
+    public Task<PortResponseEnvelope<List<PortResponseResult>>> ExecuteAsync(SendVesselStatusDto request);
 }

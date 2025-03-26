@@ -4,7 +4,7 @@
 
 
 using Italcol.Turbograneles.Adapters.Data;
-
+using Italcol.Turbograneles.Domain;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;

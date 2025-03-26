@@ -1,4 +1,4 @@
-﻿using Italcol.Turbograneles.Domain.Metalteco;
+﻿using Italcol.Turbograneles.Domain;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

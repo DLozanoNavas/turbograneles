@@ -10,7 +10,7 @@ sudo dnf install -y wget curl unzip git
 
 # Install .NET 8 SDK
 echo "Installing .NET 8 SDK..."
-sudo dnf install -y dotnet-sdk-8.0
+sudo dnf install -y dotnet-sdk-9.0
 
 # Verify installation
 dotnet --version

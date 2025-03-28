@@ -41,7 +41,7 @@ reboot
 The install-dotnet-aspire.sh script performs the following:
 	•	Updates the system
 	•	Installs development dependencies (wget, curl, unzip, git)
-	•	Installs .NET 8 SDK
+	•	Installs .NET 9 SDK
 	•	Installs and enables Docker
 	•	Installs the .NET Aspire workload
 

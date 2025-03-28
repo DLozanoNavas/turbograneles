@@ -16,4 +16,9 @@
     <ProjectReference Include="..\Italcol.TurboGraneles.ServiceDefaults\Italcol.TurboGraneles.ServiceDefaults.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\Implementations\" />
+    <Folder Include="Repositories\Interfaces\" />
+  </ItemGroup>
+
 </Project>

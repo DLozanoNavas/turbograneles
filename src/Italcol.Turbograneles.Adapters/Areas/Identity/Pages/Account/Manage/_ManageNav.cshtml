@@ -1,4 +1,5 @@
 ﻿@using Italcol.Turbograneles.Adapters.Data
+@using Italcol.Turbograneles.Domain
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

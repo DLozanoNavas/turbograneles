@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Identity;
-using Italcol.Turbograneles.Adapters.Data;
+using Italcol.Turbograneles.Domain;
 
 namespace Italcol.Turbograneles.Adapters.Areas.Identity.Pages.Account;
 

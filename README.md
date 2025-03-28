@@ -34,6 +34,7 @@ chmod +x install-dotnet-aspire.sh
 Reboot or log out/in to apply Docker group permissions:
 
 reboot
+
 ⸻
 
 📄 Script Summary

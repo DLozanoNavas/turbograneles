@@ -9,7 +9,7 @@ This guide sets up a Red Hat Enterprise Linux (RHEL 9+) system to run the Turbog
 Clone the official repository:
 
 git clone https://github.com/DLozanoNavas/turbograneles.git
-cd scripts
+cd turbugraneles
 
 ⸻
 

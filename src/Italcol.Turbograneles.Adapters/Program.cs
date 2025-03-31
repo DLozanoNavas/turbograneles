@@ -2,15 +2,26 @@ using Italcol.Turbograneles.Adapters.Data;
 using Italcol.Turbograneles.Application.Services;
 using Italcol.Turbograneles.Application.UseCases;
 using Italcol.Turbograneles.Application.UseCases.Interfaces;
-using Italcol.Turbograneles.Domain;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Kiota.Abstractions.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//var connectionString = builder.Configuration.GetConnectionString("postgresdb") ?? throw new InvalidOperationException("Connection string 'postgresdb' not found.");;
-//builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
-//builder.Services.AddDbContext<DataContext>(options => options.UseNpgsql(connectionString));
-builder.AddNpgsqlDbContext<DataContext>(connectionName: "turbograneles");
+var connectionString = builder.Configuration.GetConnectionString("postgresdb") ??
+                          // Get from environment variable
+                        Environment.GetEnvironmentVariable("TURBOGRANELES_POSTGRES_CONNECTION_STRING") ??
+                       throw new InvalidOperationException("Connection string 'postgresdb' not found.");;
+
+
+if (!string.IsNullOrWhiteSpace(connectionString))
+{
+    builder.Services.AddDbContext<DataContext>(options => options.UseNpgsql(connectionString));
+}
+else
+{
+    builder.AddNpgsqlDbContext<DataContext>(connectionName: "turbograneles");
+}
+
 
 builder.Services
     .AddIdentityApiEndpoints<ApplicationUser>()
@@ -27,7 +38,6 @@ builder.Services.AddOpenApi();
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-
 
 builder.Services.AddHttpClient<PortClientTokenFactoryService>();
 builder.Services.AddScoped<IAuthenticationProvider, BearerTokenAuthProvider>();
@@ -65,7 +75,8 @@ app.UseSwaggerUI(static options =>
     options.SwaggerEndpoint("/openapi/v1.json", "Turbograneles API V1");
 });
 
-app.MapGroup("/account").MapIdentityApi<ApplicationUser>();
+app.MapGroup("/account")
+    .MapIdentityApi<ApplicationUser>();
 
 app.MapControllers();
 app.UseHttpsRedirection();

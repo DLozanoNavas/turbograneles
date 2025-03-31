@@ -2,6 +2,7 @@ using Italcol.Turbograneles.Adapters.Data;
 using Italcol.Turbograneles.Application.Services;
 using Italcol.Turbograneles.Application.UseCases;
 using Italcol.Turbograneles.Application.UseCases.Interfaces;
+using Italcol.Turbograneles.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Kiota.Abstractions.Authentication;
 
@@ -42,8 +43,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpClient<PortClientTokenFactoryService>();
 builder.Services.AddScoped<IAuthenticationProvider, BearerTokenAuthProvider>();
 builder.Services.AddScoped<IPortClientFactoryService, PortClientFactoryService>();
-builder.Services.AddScoped<IGetVoyageAndVesselUseCase, GetVoyageAndVesselUseCase>();
 
+//Register use cases
+builder.Services.AddScoped<IGetGateInUseCase, GetGateInUseCase>();
+builder.Services.AddScoped<IGetGateOutUseCase, GetGateOutUseCase>();
+builder.Services.AddScoped<ISendVesselStatusUseCase, SendVesselStatusUseCase>();
+builder.Services.AddScoped<IGetVoyageAndVesselUseCase, GetVoyageAndVesselUseCase>();
+builder.Services.AddScoped<IGetLoadByEachVesselUseCase, GetLoadByEachVesselUseCase>();
+builder.Services.AddScoped<ISendCustomsReleaseCargoUseCase, SendCustomsReleaseCargoUseCase>();
+builder.Services.AddScoped<IGetAppointmentInformationUseCase, GetAppointmentInformationUseCase>();
+builder.Services.AddScoped<ISendTruckFinalizationLoadingUseCase, SendTruckFinalizationLoadingUseCase>();
 
 builder.Services.AddScoped<IPortClientFactoryService, PortClientFactoryService>();
 

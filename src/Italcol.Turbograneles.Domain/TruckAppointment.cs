@@ -4,6 +4,7 @@ namespace Italcol.Turbograneles.Domain
 {
     public class TruckAppointment
     {
+        public string Id { get; set; }
         public string BlNumber { get; set; }
         public string ProductId { get; set; }
         public long MaxWeightPermitted { get; set; }
@@ -11,15 +12,14 @@ namespace Italcol.Turbograneles.Domain
         public long ArriveWeight { get; set; }
         public long CargoWeight { get; set; }
         public long TruckGrossWeight { get; set; }
-        public long WeightingBridgeId { get;set; }
         public int DestinationCode { get; set; }
-        public string TransportId { get; set; }
-        public int WeightBridgeId { get; set; }
+        public int WeightingBridgeId { get; set; }
         public int TruckTransactionId { get; set; }
+        public string TransportId { get; set; }
         public DateTime StartDateTime { get; set; }
         public DateTime EndDateTime { get; set; }
-        public DateTime CreatedDateTime { get; set; }
-        public DateTime UpdatedDateTime { get; set; }
+        public DateTime CreatedAtDateTime { get; set; }
+        public DateTime UpdatedAtDateTime { get; set; }
         public DateTime ArriveDateTime { get; set; }
         public DateTime DepartureDateTime { get; set; }
 

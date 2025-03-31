@@ -2,6 +2,7 @@ using Italcol.Turbograneles.Adapters.Data;
 using Italcol.Turbograneles.Application.Services;
 using Italcol.Turbograneles.Application.UseCases;
 using Italcol.Turbograneles.Application.UseCases.Interfaces;
+using Italcol.Turbograneles.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Kiota.Abstractions.Authentication;
 

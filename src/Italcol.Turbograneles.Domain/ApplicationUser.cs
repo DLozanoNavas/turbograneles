@@ -6,6 +6,7 @@ namespace Italcol.Turbograneles.Domain;
 public class ApplicationUser : IdentityUser
 {
     public List<AppointmentStatus> CreatedAppointmentStatuses { get; set; }
+
     public List<TruckAppointment> CreatedAppointments { get; set; }
     public List<TruckAppointment> UpdatedAppointments { get; set; }
     public List<Voyage> CreatedVoyages { get; set; }
